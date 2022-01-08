@@ -39,7 +39,7 @@ create table wykonawca
 drop table if exists utwor_instrument;
 create table utwor_instrument
 (
-    utwor_id      int references otwor(id),
+    utwor_id      int references utwor(id),
     instrument_id int references instrument(id),
     primary key (utwor_id, instrument_id)
 );
