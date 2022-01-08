@@ -106,7 +106,7 @@ select imie, nazwisko, instrument.nazwa as instrument from wykonawca -- zwraca i
 join instrument on wykonawca.instrument_id = instrument.id
 order by nazwisko;
 
-select instrument.nazwa as instrument -- zwraca instrumenty grający w Uwerturze kubańskiej
+select instrument.nazwa as instrument -- zwraca instrumenty grające w Uwerturze kubańskiej
 from instrument
 right join utwor_instrument as u_i on u_i.instrument_id = instrument.id
 right join utwor on u_i.utwor_id = utwor.id
