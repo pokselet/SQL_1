@@ -72,14 +72,14 @@ values           (5, 'flet');
 delete from utwor_instrument;
 insert into utwor_instrument(utwor_id, instrument_id)
 values           (1, 1),
-				 (1, 2),
-			     (1, 4),
+		 (1, 2),
+		 (1, 4),
                  (2, 1),
-				 (2, 4),
-			     (2, 3), 
+		 (2, 4),
+		 (2, 3), 
                  (3, 1),
-				 (3, 3),
-			     (4, 4),
+		 (3, 3),
+		 (4, 4),
                  (4, 1);
 delete from wykonawca;
 insert into wykonawca(id, imie, nazwisko, instrument_id)
