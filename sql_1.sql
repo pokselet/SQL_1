@@ -103,7 +103,8 @@ select nazwa, imię, nazwisko from utwor                     -- zwraca tytuł ut
 join kompozytor on utwor.kompozytor_id = kompozytor.id;     
 
 select imie, nazwisko, instrument.nazwa as instrument from wykonawca -- zwraca imię i nazwisko wykonawca oraz instrument, na którym gra
-join instrument on wykonawca.instrument_id = instrument.id;
+join instrument on wykonawca.instrument_id = instrument.id
+order by nazwisko;
 
 select instrument.nazwa as instrument -- zwraca instrumenty grający w Uwerturze kubańskiej
 from instrument
