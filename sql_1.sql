@@ -31,7 +31,7 @@ create table instrument
 drop table if exists wykonawca;
 create table wykonawca
 (
-	id            int primary key auto_increment,
+    id            int primary key auto_increment,
     imie          varchar(30),
     nazwisko      varchar(30),
     instrument_id char references instrument(id)
@@ -39,7 +39,7 @@ create table wykonawca
 drop table if exists utwor_instrument;
 create table utwor_instrument
 (
-	utwor_id      int references otwor(id),
+    utwor_id      int references otwor(id),
     instrument_id int references instrument(id),
     primary key (utwor_id, instrument_id)
 );
