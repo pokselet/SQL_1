@@ -9,14 +9,14 @@ show tables;
 drop table if exists kompozytor;
 create table kompozytor
 (
-	id       int         primary key,
+    id       int         primary key,
     imię     varchar(50),
     nazwisko varchar(50)
 );
 drop table if exists utwor;
 create table utwor
 (
-	id               int primary key,
+    id               int primary key,
     nazwa            varchar(50),
     czas_trwania_min int,
     kompozytor_id    int,
@@ -25,7 +25,7 @@ create table utwor
 drop table if exists instrument;
 create table instrument
 (
-	id    int primary key auto_increment,
+    id    int primary key auto_increment,
     nazwa varchar(40)
 );
 drop table if exists wykonawca;
@@ -54,14 +54,14 @@ drop table kompozytor;
 delete from utwor;
 insert into utwor(id, nazwa, czas_trwania_min, kompozytor_id)
 values             (1, 'Uwertura kubańska', 10, 1),
-				   (2, 'III Symfonia - Symfonia koncertująca', 26, 2),
-			       (3, 'Tance symfoniczne z West Side Story', 22, 3),
+		   (2, 'III Symfonia - Symfonia koncertująca', 26, 2),
+	           (3, 'Tance symfoniczne z West Side Story', 22, 3),
                    (4, 'fragmenty z suit orkiestrowych Arlezjanka', 23, 4);
 delete from instrument;
 insert into instrument(id, nazwa)
 values           (1, 'skrzypce'),
-				 (2, 'altówka'),
-			     (3, 'wielenczela'),
+		 (2, 'altówka'),
+	         (3, 'wielenczela'),
                  (4, 'fortepian'),
                  (5, 'trójkąt'),
                  (6, 'kontrabas');
@@ -84,8 +84,8 @@ values           (1, 1),
 delete from wykonawca;
 insert into wykonawca(id, imie, nazwisko, instrument_id)
 values               (1,'Maria', 'Machowska', 1),
-				     (2, 'Marek', 'Iwański', 2),
-			         (3, 'Robert', 'Putowski', 3),
+		     (2, 'Marek', 'Iwański', 2),
+		     (3, 'Robert', 'Putowski', 3),
                      (4, 'Grzegorz', 'Gorczyca', 4),
                      (5, 'Grzegorz', 'Gorczyca', 4);
                      
@@ -111,9 +111,7 @@ right join utwor_instrument as u_i on u_i.instrument_id = instrument.id
 right join utwor on u_i.utwor_id = utwor.id
 where utwor.nazwa = "Uwertura kubańska";
 
-select wykonawca.imie  -- zwraca wykonawców nie grających w żadnym utworze
-from wykonawca
-left join instrument on wykonawca.instrument_id = instrument.id;
+
 
 
  
